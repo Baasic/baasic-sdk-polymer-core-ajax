@@ -1,10 +1,10 @@
-﻿{
+{
   "name": "baasic-ajax",
   "version": "0.0.1",
   "dependencies": {
     "polymer": "Polymer/polymer#~0.3.3",
     "core-ajax":  "Polymer/core-ajax#>=0.3.3",
-    "core-localstorage":  "Polymer/core-localstorage#>=0.3.4"
+    "baasic-localstorage":  "git://monosoftware/baasic-localstorage.git#>=0.0.1"
   },
   "authors": [
     "denis@mono-software.com"
