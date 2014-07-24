@@ -1,0 +1,28 @@
+﻿{
+  "name": "baasic-ajax",
+  "version": "0.0.1",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "core-ajax":  "Polymer/core-ajax#>=0.3.3",
+    "core-localstorage":  "Polymer/core-localstorage#>=0.3.4"
+  },
+  "authors": [
+    "denis@mono-software.com"
+  ],
+  "description": "Baasic version of core Ajax Web component.",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "baasic",
+    "ajax"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/monosoftware/baasic-ajax",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

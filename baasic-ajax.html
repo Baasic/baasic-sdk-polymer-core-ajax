@@ -1,0 +1,32 @@
+﻿<link rel="import" href="../baasic-localstorage/baasic-localstorage.html">
+<link rel="import" href="../core-ajax/core-ajax.html">
+
+<polymer-element name="baasic-ajax" extends="core-ajax">
+    <template>
+        <shadow>
+        </shadow>
+        <baasic-localstorage name="baasicUser" id="storage" value="{{baasicUser}}"></baasic-localstorage>
+    </template>
+    <script>
+        Polymer('baasic-ajax', {
+            accessToken: "",
+            tokenType: "",
+            go: function () {
+                this.localstorageLoad();
+                if (this.accessToken) {
+                    var headers = this.headers || {};
+                    headers['Authorization'] = this.tokenType + ' ' + this.accessToken;
+                    this.headers = headers;
+                }
+                this.super();
+            },
+            localstorageLoad: function () {
+                this.$.storage.load();
+                if (this.baasicUser) {
+                    this.accessToken = this.baasicUser.accessToken;
+                    this.tokenType = this.baasicUser.tokenType;
+                }
+            }
+        });
+    </script>
+</polymer-element>
