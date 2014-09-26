@@ -2,7 +2,7 @@
   "name": "baasic-ajax",
   "version": "0.0.1",
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.3",
+    "polymer": "Polymer/polymer#>=0.3.3",
     "core-ajax":  "Polymer/core-ajax#>=0.3.3",
     "baasic-globals":  "http://gitserver/monosoftware/baasic-globals.git#>=0.0.1"
   },
