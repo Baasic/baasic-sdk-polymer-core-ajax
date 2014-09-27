@@ -1,6 +1,6 @@
 {
   "name": "baasic-ajax",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.3.3",
     "core-ajax":  "Polymer/core-ajax#>=0.3.3",
