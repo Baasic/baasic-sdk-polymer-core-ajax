@@ -4,7 +4,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.3.3",
     "core-ajax":  "Polymer/core-ajax#>=0.3.3",
-    "baasic-globals":  "http://gitserver/monosoftware/baasic-globals.git#>=0.0.1"
+    "baasic-globals":  "http://gitserver/monosoftware/baasic-sdk-polymer-core-globals.git#>=0.0.1"
   },
   "authors": [
     "denis@mono-software.com"
