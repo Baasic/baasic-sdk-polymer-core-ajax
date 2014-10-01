@@ -1,4 +1,4 @@
-﻿<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../baasic-globals/baasic-globals.html">
 <link rel="import" href="../core-ajax/core-ajax.html">
 
@@ -12,11 +12,15 @@
         Polymer('baasic-ajax', {
             go: function () {
                 this.globals = this.$.globals;
+                this.xhrArgs = this.globals.config.xhrArgs;
+                var headers = this.headers || {};
                 if (this.globals.baasicUser && this.globals.baasicUser.accessToken) {
-                    var headers = this.headers || {};
                     headers['Authorization'] = this.globals.baasicUser.tokenType + ' ' + this.globals.baasicUser.accessToken;
-                    this.headers = headers;
                 }
+                else {
+                    headers['Authorization'] = '';
+                }
+                this.headers = headers;
 
                 this.super();
             }
