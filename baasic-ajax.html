@@ -1,23 +1,21 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../baasic-globals/baasic-globals.html">
+<link rel="import" href="../baasic-globals/globals-import.html">
 <link rel="import" href="../core-ajax/core-ajax.html">
 
 <polymer-element name="baasic-ajax" extends="core-ajax">
     <template>
         <shadow>
         </shadow>
-        <baasic-globals id="globals"></baasic-globals>
     </template>
     <script>
         Polymer('baasic-ajax', {
             go: function () {
-                this.globals = this.$.globals;
-                this.xhrArgs = this.globals.config.xhrArgs;
                 var headers = this.headers || {};
-                if (this.globals.baasicUser && this.globals.baasicUser.accessToken) {
-                    headers['Authorization'] = this.globals.baasicUser.tokenType + ' ' + this.globals.baasicUser.accessToken;
+                var baasicUser = Baasic.Cache.getItem('baasicUser');
+                if (baasicUser && baasicUser.accessToken) {
+                    headers['Authorization'] = baasicUser.tokenType + ' ' + baasicUser.accessToken;
                 }
-                else {
+                else if (!headers['Authorization']) {
                     headers['Authorization'] = '';
                 }
                 this.headers = headers;
