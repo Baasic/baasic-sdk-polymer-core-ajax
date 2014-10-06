@@ -14,6 +14,14 @@
                 var baasicUser = Baasic.Cache.getItem('baasicUser');
                 if (baasicUser && baasicUser.accessToken) {
                     headers['Authorization'] = baasicUser.tokenType + ' ' + baasicUser.accessToken;
+                    //referesh token sliding expiration time
+                    baasicUser.expiresAbsolute = new Date(new Date().getTime() + (baasicUser.expiresIn * 1000));
+                    Baasic.Cache.setItem('baasicUser', baasicUser, {
+                        expirationAbsolute: baasicUser.expiresAbsolute,
+                        expirationSliding: null,
+                        priority: Cache.Priority.HIGH,
+                        callback: null
+                    });
                 }
                 else if (!headers['Authorization']) {
                     headers['Authorization'] = '';
