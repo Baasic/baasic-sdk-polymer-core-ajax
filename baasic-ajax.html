@@ -43,6 +43,12 @@ The `baasic-ajax` element inherits the core-ajax element, adding the additional 
                 this.headers = headers;
 
                 this.super();
+            },
+            //dirty fix for problems with sync calls introduced in versions of core-ajax greater than 0.3.3; TODO: find a better solution
+            processResponse: function (xhr) {
+                var response = this.evalResponse(xhr);
+                this.response = response;
+                this.fire('core-response', { response: response, xhr: xhr });
             }
         });
     </script>
