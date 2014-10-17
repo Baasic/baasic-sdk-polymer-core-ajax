@@ -1,13 +1,10 @@
 {
-  "name": "baasic-ajax",
+  "name": "baasic-sdk-polymer-core-ajax",
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.4.2",
     "core-ajax":  "Polymer/core-ajax#>=0.4.2",
-    "baasic-globals":  "http://gitserver/monosoftware/baasic-sdk-polymer-core-globals.git#>=0.0.1"
+    "baasic-sdk-polymer-core-globals":  "Baasic/baasic-sdk-polymer-core-globals#>=0.1.0"
   },
-  "authors": [
-    "denis@mono-software.com"
-  ],
   "description": "Baasic version of the core Ajax Web component.",
   "keywords": [
     "polymer",
@@ -16,7 +13,7 @@
     "ajax"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/monosoftware/baasic-ajax",
+  "homepage": "https://github.com/baasic/baasic-sdk-polymer-core-ajax",
   "ignore": [
     "**/.*",
     "node_modules",
