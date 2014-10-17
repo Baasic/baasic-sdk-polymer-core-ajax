@@ -1,9 +1,9 @@
 {
-  "name": "baasic-sdk-polymer-core-ajax",
+  "name": "baasic-ajax",
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.4.2",
     "core-ajax":  "Polymer/core-ajax#>=0.4.2",
-    "baasic-sdk-polymer-core-globals":  "Baasic/baasic-sdk-polymer-core-globals#>=0.1.0"
+    "baasic-globals":  "Baasic/baasic-sdk-polymer-core-globals#>=0.1.0"
   },
   "description": "Baasic version of the core Ajax Web component.",
   "keywords": [
